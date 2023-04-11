@@ -1,0 +1,22 @@
+<script>
+
+    function shape(side1, side2, side3){
+        if(side1 == side2 && side1 == side3){
+          document.write("this value for Equilateral triangle");
+        }
+        else if(side1 == side2 || side2 == side3 || side1 == side3){
+          document.write("this value for Isosceles triangle");
+        }
+        else{
+          document.write("this value for Scalene triangle");
+        }
+      }
+    
+      var side1 = parseInt(prompt("Enter side 1"));
+      var side2 = parseInt(prompt("Enter side 2"));
+      var side3 = parseInt(prompt("Enter side 3"));
+      
+    
+     shape(side1, side2, side3);
+    
+    </script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive design</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav div{
+            border: 1px solid black;
+            font-size: 20px;
+            padding: 5px;
+            width: 200px;
+            background-color: bisque;
+            margin-bottom: 10px;
+        }
+        @media screen and (orientation:landscape){
+            nav{
+                display: flex;
+            }
+            nav div{
+                margin-right: 20px;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            nav div{
+                display: block;
+                margin-bottom: 20px;
+                width: 20px;
+            }
+            .nav-title{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <span class="bi bi-house-fill"></span>
+            <span class="nav-title">home</span>
+        </div>
+        <div>
+            <span class="bi bi-person-fill"></span>
+            <span class="nav-title">login</span>
+        </div>
+        <div>
+            <span class="bi bi-globe"></span>
+            <span class="nav-title">network</span>
+        </div>
+    </nav>
+</body>
+</html>

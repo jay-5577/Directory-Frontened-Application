@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            
+        }
+        span{
+            font-size: 40px;
+        }
+        @keyframes zoom {
+            from{
+                font-size: 40px;
+            }
+            to{
+                font-size: 140px;
+            }
+        }
+        .w{
+            animation-name: zoom;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .e{
+            animation-name: zoom;
+            animation-duration:1.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .l{
+            animation-name: zoom;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .c{
+            animation-name: zoom;
+            animation-duration: 2.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .o{
+            animation-name: zoom;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .m{
+            animation-name: zoom;
+            animation-duration: 3.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .er{
+            animation-name: zoom;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="w">W</span>
+        <span class="e">E</span>
+        <span class="l">L</span>
+        <span class="c">C</span>
+        <span class="o">O</span>
+        <span class="m">M</span>
+        <span class="er">E</span>
+    </div>
+</body>
+</html>

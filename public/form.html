@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 align="center">Register User</h1>
+    <form align="center" onreset="alert('form is reset')" >
+        <dl>
+            <dt>User Name</dt>
+            <dd><input required autofocus value="jayesh choudhary"  minlength="4" maxlength="15" type="text" id="username" name="username"></dd><br>
+            <dt>Mobile</dt>
+            <dd><input required  minlength="10" placeholder="eg: +91 and 10 digits" maxlength="12" type="text" id="mobile" name="mobile"></dd><br>
+            <dt>your Pin</dt>
+            <dd><input required type="text"  placeholder="5 Digit Pin" minlength="5" maxlength="5" id="pin" name="pin"></dd>
+        </dl>
+        <br>
+        <button>Register</button>&nbsp;&nbsp;<button type="reset">Reset</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<script>
+    var watch = {
+       "Name": "Fossil Watch",
+       "Price": 0,
+       "Stock": true,
+       "Cities": ["Delhi","Hyd"],
+       "Rating": {Rate:4.3, Count:4500},
+       "Qty": 0,
+       "Total": function(){
+           return  this.Qty * this.Price;
+       },
+       "Print": function(){
+           document.write(`
+             Name=${this.Name} <br>
+             Price=${this.Price}<br>
+             Stock=${this.Stock}<br>
+             Qty=${this.Qty}<br>
+             Rating=${this.Rating.Rate} [${this.Rating.Count}]<br>
+             Shipped To=${this.Cities.toString()} <br>
+             Total=${Math.round(this.Total())}
+           `);
+       }
+    }
+    watch.Price = parseFloat(prompt("Enter Price"));
+    watch.Qty = parseInt(prompt("Enter Quantity"));
+    watch.Rating.Rate = parseFloat(prompt("Enter Your Rating from 1 to 5"));
+    watch.Print();
+</script>

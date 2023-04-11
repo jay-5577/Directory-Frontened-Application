@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detials design</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        summary{
+            margin-bottom: 10px;
+            border: 1px solid black;
+            width: 100px;
+            padding: 10px;
+            background-color: rgb(239, 60, 60);
+        }
+        details div{
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            width: 120px;
+            padding: 5px;
+            background-color: blueviolet;
+            color: white;
+            margin-left: 20px;
+        }
+        summary:hover{
+            cursor: grab;
+            background-color: bisque;
+        }
+        details div:hover{
+            cursor: grab;
+            background-color: rgb(15, 14, 14);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <menu>
+            <div>
+                <details open>
+                    <summary>Electronics</summary>
+                    <div>television</div>
+                    <div>mobile</div>
+                    <div>watches</div>
+                </details>
+            </div>
+            <div>
+                <details>
+                    <summary>Clothes</summary>
+                    <div>men's wear</div>
+                    <div>women's wear</div>
+                    <div>kid's wear</div>
+                </details>
+            </div>
+            <div>
+                <details>
+                    <summary>footwear</summary>
+                    <div>casuals</div>
+                    <div>loffers</div>
+                    <div>boots</div>
+                    <div>sneakers</div>
+                </details>
+            </div>
+        </menu>
+    </nav>
+</body>
+</html>

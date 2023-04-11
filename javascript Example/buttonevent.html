@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function largclick(){
+            window.open('../public/images/avatar.jpg','AVATAR','height=400 width=400');
+        }
+        document.oncontextmenu = function(){
+            alert("right click is not allowed");
+            return false;
+        }
+        document.onselectstart = function(){
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h2>right click and selection is disabled on this page</h2>
+    <div>
+        <img src="../public/images/avatar.jpg" height="100" width="100" ondblclick="largclick()">
+        <p>double click on image to large</p>
+    </div>
+</body>
+</html>

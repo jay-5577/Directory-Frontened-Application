@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 500px;
+            align-items: center;
+            background-color: black;
+        }
+        marquee{
+            height: 300px;
+            align-items: center;
+            display: flex;
+        }
+        img{
+            height: 125px;
+            width: 125px;
+            transition: 2s;
+            margin: 20px;
+        }
+        img:hover{
+            box-shadow: 5px 5px 5px rgb(15, 100, 100);
+            transform: matrix(1.5,0,0,1.5,0,0);
+            transition: 1;
+        }
+    </style>
+</head>
+<body>
+    <marquee scrollamount="25" onmouseover="this.stop()" onmouseout="this.start()">
+        <img src="public/kids title.jpg" >
+        <img src="public/ktm.png" >
+        <img src="public/kids 1img.jpg" >
+    </marquee>
+</body>
+</html>

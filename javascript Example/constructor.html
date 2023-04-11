@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        class product{
+            constructor(jklm){
+                alert(`connected to ${jklm} database`);
+            }
+            insert(){
+                document.write("recorde inserted");
+            }
+            update(){
+                document.write("recorde updated");
+            }
+            delete(){
+                document.write("recorde deleted");
+            }
+        }
+        function updateclick(){
+            var obj = new product(document.getElementById("data").value);
+            obj.update();
+        }
+        function insertclick(){
+            var obj = new product(document.getElementById("data").value);
+            obj.insert();
+        }
+        function deleteclick(){
+            var obj = new product(document.getElementById("data").value);
+            obj.delete();
+        }
+    </script>
+</head>
+<body>
+    <br>
+        <select  id="data">
+            <option>select database</option>
+            <option>my sql</option>
+            <option>oracle</option>
+            <option>sql server</option>
+        </select>
+    <br>
+    <button class="btn btn-success" onclick="insertclick()">insert</button>
+    <button class="btn btn-warning" onclick="updateclick()">update</button>
+    <button class="btn btn-danger" onclick="deleteclick()">delete</button>
+    <br><br>
+
+</body>
+</html>

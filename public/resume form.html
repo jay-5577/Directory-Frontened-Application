@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div{
+        margin-bottom: 15px;
+      }
+      form{
+        margin-left: 50px;
+        font-family: arial;
+       
+      }
+      button{
+        align-items: center;
+        color: rgb(239, 235, 235);
+        font-weight: bold;
+        width: 100px;
+        background-color: rgb(220, 40, 106);
+      }
+      h3{
+        text-align: center;
+        color: rgb(149, 25, 95);
+        background-color: black;
+        margin-bottom: 20px;
+      }
+     
+      body{
+        background-size: cover;
+      }
+      h2{
+        font-weight: bold;
+        font-size: 35px;
+      }
+      .ab{
+        columns: 2;
+      }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <img src="public/grade.jpg" width="100%" height="100%" >
+      <h2 align="center">RESUME</h2>
+            <h3>PERSONAL DETAILS</h3>
+           <div>
+            NAME: <input type="text" name="Name" required placeholder="your name"><br><br>
+            ADDRESS: <input type="text" name="address" required placeholder="your address"><br><br>
+           <div> EMAIL-ID: <input type="email" name="email"required> <br><br>
+            PHONE NO.: <input type="text" placeholder="10 digit no." pattern="\+91\d{10}" name="phone"required></div>
+           </div>
+            <div>
+                AGE: <input type="number" name="age" required placeholder="age" min="18" va max="60" >
+            </div>
+            <div>
+                GENDER: <input type="radio" name="gender" value="male" required>Male
+                <input type="radio" name="gender" value="female"required>Female
+                <input type="radio" name="gender" value="other"required>other
+            </div>
+            <h3>QUALIFICATION</h3>
+            <div>
+               <select name="graduation" required>
+                    <option>graduation</option>
+                    <option>B.tech</option>
+                    <option>B.com</option>
+                    <option>B.A</option>
+                    <option>MBA</option>
+                    <option>BSC</option>
+               </select>
+               <select name="course" required>
+                <option>course</option>
+                <option>Science stream</option>
+                <option>Maths stream</option>
+                <option>Commerce stream</option>
+                <option>Arts stream</option>
+               </select>
+            </div>
+            <h3>LANGUAGE YOU KNOW</h3>
+            <div class="ab">
+                <input type="checkbox" name="language"  value="english">ENGLISH <br><br>
+                <input type="checkbox" name="language"  value="हिन्दी">हिन्दी <br><br>
+                <input type="checkbox" name="language"  value="marathi">MARATHI <br><br>
+                <input type="checkbox" name="language"  value="TAMIL">TAMIL <br><br>
+                <input type="checkbox" name="language"  value="GUJRATI">GUJRATI <br><br>
+                <input type="checkbox" name="language"  value="BANGALI">BANGALI <br><br>
+
+            </div>
+            <h3>SKILLS YOU HAVE</h3>
+            <div>
+                <input type="checkbox" name="SKILLS"  value="html">HTML <br><br>
+                <input type="checkbox" name="SKILLS"  value="css">CSS <br><br>
+                <input type="checkbox" name="SKILLS"  value="javascript">JAVASCRIPT<br><br>
+                <input type="checkbox" name="SKILLS"  value="jquery">JQUERY<br><br>
+                <input type="checkbox" name="SKILLS"  value="reactjs">REACT JS<br><br>
+                <input type="checkbox" name="SKILLS"  value="nodejs">NODEJS
+            </div>
+            
+        <div align="center">
+            <button>submit</button>
+        </div>
+           
+    </form>
+</body>
+</html>

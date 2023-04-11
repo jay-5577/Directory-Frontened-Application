@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function BookClick(){
+            document.getElementById("summaryContainer").style.display = "block";
+            poster = document.getElementById("poster");
+            movieName = document.getElementById("lstMovie").value;
+            if(movieName=="Avatar") {
+                poster.src="public/images/avatar.jpg";
+            } else {
+                poster.src="public/images/krish.jpg";
+            }
+
+            document.getElementById("lblName").innerHTML = movieName;
+            document.getElementById("lblCinema").innerHTML = document.getElementById("lstCinema").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("lstDate").value;
+            document.getElementById("lblTime").innerHTML = document.getElementById("lstTime").value;
+            document.getElementById("lblSeats").innerHTML = document.getElementById("lstSeats").value;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+
+    <div class="mt-4 p-2 bg-dark">
+        <div class="d-flex justify-content-between">
+            <div>
+                <select id="lstMovie" class="form-select">
+                    <option>Select Movie</option>
+                    <option>Avatar</option>
+                    <option>Krishh</option>
+                </select>
+            </div>
+            <div>
+                <select id="lstCinema" class="form-select">
+                    <option>Select Cinema</option>
+                    <option>PVR Cinemas</option>
+                    <option>Inox B'Hills</option>
+                </select>
+            </div>
+            <div>
+                <select id="lstDate" class="form-select">
+                    <option>Select Date</option>
+                    <option>Thursday, December 22, 2022</option>
+                    <option>Friday, December 23, 2022</option>
+                </select>
+            </div>
+            <div>
+                <select id="lstTime" class="form-select">
+                    <option>Show Time</option>
+                    <option>6:40 PM</option>
+                    <option>10:30 PM</option>
+                </select>
+            </div>
+            <div>
+                <select id="lstSeats" class="form-select">
+                    <option>Select Seats</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="BookClick()" class="btn btn-danger">Book</button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4" id="summaryContainer" style="display: none;" >
+        <dl class="w-25">
+            <dt class="bg-dark text-white p-2">Booking Summary</dt>
+            <dd class="mt-2">
+                <img id="poster" width="100%" height="160">
+                <dl>
+                    <dt>Movie Name</dt>
+                    <dd id="lblName"></dd>
+                    <dt>Cinema</dt>
+                    <dd id="lblCinema"></dd>
+                    <dt>Date</dt>
+                    <dd id="lblDate"></dd>
+                    <dt>Time</dt>
+                    <dd id="lblTime"></dd>
+                    <dt>Seats</dt>
+                    <dd id="lblSeats"></dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

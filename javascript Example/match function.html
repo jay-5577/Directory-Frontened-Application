@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var pattern = / /;
+        var tip = "";
+        function changeclick(){
+            var country = document.getElementById("country").value;
+            var pic = document.getElementById("pic");
+            var mobile = document.getElementById("mobile");
+            var btnsubmit = document.getElementById("btnsubmit");
+            if(country=="india"){
+                pic.src = "/public/images/india.webp";
+                mobile.placeholder = "eg : +91 & 10 digit no.";
+                pattern = /\+91\d{10}/;
+                tip = "eg : +91 & 10 digit no.";
+                btnsubmit.disabled = false;
+            }
+            else if(country=="uk"){
+                pic.src = "/public/images/uk.webp";
+                mobile.placeholder = "eg : +(44)(20) 1234 5678";
+                pattern = /\(44\)\(20\)\s\d{4}\s\d{4}/;
+                tip = "eg : +(44)(20) 1234 5678";
+                btnsubmit.disabled = false;
+            }
+            else if(country=="us"){
+                pic.src = "/public/images/us.webp";
+                mobile.placeholder = "eg : +(1)(425) 555-0100";
+                pattern = /\(1\)\(425\)\s\d{3}-\d{4}/;
+                tip = "eg : +(1)(425) 555-0100";
+                btnsubmit.disabled = false;
+            }
+            else{
+                pic.src = "";
+                pic.alt = "select images";
+                mobile.placeholder = "select country";
+                tip = "select country";
+                btnsubmit.disabled = true;
+            }
+        }
+       
+        function submitclick(){
+            var mobile = document.getElementById("mobile").value;
+            if(mobile.match(pattern)){
+                document.write(`verified successfully opt sent to your ${mobile}`);
+            }
+            else if(mobile==""){
+                document.getElementById("head").innerHTML = "please enter mobile no.";
+            }
+            else{
+                document.getElementById("head").innerHTML = `invalid mobile : ${tip}`.fontcolor('red');
+            }
+        }
+    </script>
+    <style>
+        #pic{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="position-relative">
+        <legend>Verify mobile</legend>
+        <img id="pic" src="/public/images/uk" height="70px" width="100px">
+        <dl>
+            <dt>select your country</dt>
+            <dd>
+                <select id="country" onchange="changeclick()">
+                    <option>select your country</option>
+                    <option>india</option>
+                    <option>uk</option>
+                    <option>us</option>
+                </select>
+            </dd>
+            <dt>mobile</dt>
+            <dd><input type="text" id="mobile"></dd>
+        </dl>
+        <button onclick="submitclick()" disabled id="btnsubmit">submit</button>
+    </fieldset>
+    <h2 align="center" id="head"></h2>
+</body>
+</html>

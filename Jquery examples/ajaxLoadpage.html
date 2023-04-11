@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+         function LoadPage(pageName){
+            $.ajax({
+                method:'get',
+                url: pageName,
+                success: function(data){
+                    $("main").html(data);
+                }
+            })
+         }
+
+         $(function(){
+              LoadPage("main by table.html");
+
+              $("button").click(function(e){
+                   LoadPage(`${e.target.name}.html`);
+              })
+         })
+    </script>
+</head>
+<body class="container-fluid">
+    <header class="text-center bg-dark text-white p-1">
+        <h1>Shopper - Online Shopping</h1>
+    </header>
+    <section class="row">
+        <nav class="btn-group-vertical col-3 mt-2">
+            <button name="mens" class="btn btn-dark mb-2">Mens Fashion</button>
+            <button name="womens" class="btn btn-dark mb-2">Women Fashion</button>
+            <button name="kids" class="btn btn-dark mb-2">Kids Fashion</button>
+        </nav>
+        <main class="col-9">
+
+        </main>
+    </section>
+</body>
+</html>

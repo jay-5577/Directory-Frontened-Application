@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        function LoadCategories(){
+            $.ajax({
+                method: "get",
+                url: "http://fakestoreapi.com/products/categories",
+                success: function(data){
+                    data.unshift("all");
+                    $.each(data, (property, category)=>{
+                          $(`<option value=${category}>${category.toUpperCase()}</option>`).appendTo("#lstCategories");
+                    })
+                },
+                error: function(ex){
+                    alert(`Error : ${ex.statusText}`);
+                }
+            })
+        }
+
+        function LoadProducts(path){
+            $("main").html("");
+            $.ajax({
+                method: "get",
+                url: path,
+                success: function(data) {
+                    $.each(data,function(property, product){
+                        $(`
+                        <div class="card m-2 p-2" style="width:200px">
+                            <img src=${product.image} class="card-img-top" height="140">
+                            <div class="card-header" style="height:130px">
+                                <p>${product.title}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button name=${product.id} id="AddToCart" class="btn btn-danger w-100">Add to Cart</button>
+                            </div>
+                        </div>
+                        `).appendTo("main");
+                    })
+                }
+            })
+        }
+
+        $(function(){
+            LoadCategories();
+            LoadProducts("http://fakestoreapi.com/products");
+
+            $("#lstCategories").change(function(e){
+                LoadProducts(`http://fakestoreapi.com/products/category/${e.target.value}`);
+            })
+
+            $(document).on("click","#AddToCart", function(e){
+                 alert(`Add Clicked : ${e.target.name}`);
+            })
+           
+        })
+    </script>
+</head>
+<body class="container-fluid">
+    <section  class="row">
+        <nav class="col-3">
+            <h3>Select Category</h3>
+            <select id="lstCategories" class="form-select">
+
+            </select>
+        </nav>
+        <main class="d-flex col-9 flex-wrap overflow-auto" style="height:500px">
+           
+        </main>
+    </section>
+</body>
+</html>

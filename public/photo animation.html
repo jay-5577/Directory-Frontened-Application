@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes SlideIn {
+            from {
+                margin-left: 120%;
+                width: 10px;
+                height: 10px;
+                transform: rotate(360deg);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(-180deg);
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+                height: 100%;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes ZoomIn {
+            from {
+                font-size: 5px;
+            }
+            to {
+                font-size: 100px;
+            }
+        }
+
+        img {
+          animation-name: SlideIn;
+          animation-duration: 4s;  
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        body {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        h1 {
+            animation-name: ZoomIn;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Kid's Clothing</h1>
+        <img src="public/kids img.jpg" width="100%">
+    </div>
+</body>
+</html>

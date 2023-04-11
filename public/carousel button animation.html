@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    
+    <div class=" carousel slide carousel-dark" id="topbanner" data-bs-ride="carousel">
+        <div class=" carousel-inner">
+            <div class=" carousel-item active" data-bs-interval="3000">
+                <img src="public/amazon.jpg" class=" d-block w-100" style="height: 350px;">
+            </div>
+            <div class=" carousel-item" data-bs-interval="2000">
+                <img src="public/education.jpg" class=" d-block w-100" style="height: 350px;">
+            </div>
+            <div class=" carousel-item" data-bs-interval="4000">
+                <img src="public/hotel.webp" class=" d-block w-100" style="height: 350px;">
+            </div>
+        </div>
+        <button data-bs-slide="prev" data-bs-target="#topbanner" class=" carousel-control-prev">
+            <span class=" carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-slide="next" data-bs-target="#topbanner" class=" carousel-control-next">
+            <span class=" carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class=" active" data-bs-target="#topbanner" data-bs-slide-to="0"></button>
+            <button data-bs-target="#topbanner" data-bs-slide-to="1"></button>
+            <button data-bs-target="#topbanner" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

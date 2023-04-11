@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        function LoadPage(pageName){
+            $.ajax({
+                method: "get",
+                url: pageName,
+                success: function(data){
+                    $("main").html(data)
+                }
+            })
+        }
+        $(function(){
+            LoadPage("home.html");
+            $("#navHome").click(function(){
+                LoadPage("home.html");
+            })
+            $("#navTutorial").click(function(){
+                LoadPage("tutorial.html");
+            })
+        })
+    </script>
+</head>
+<body class="container-fluid">
+    <header class="bg bg-dark text-white text-center">
+        <h3>Naresh IT - Tutorials</h3>
+    </header>
+    <section class="row mt-2">
+        <nav class="col-2">
+          <div class="mb-2">
+            <button id="navHome" class="btn btn-dark w-100">Home</button>
+          </div>
+          <div>
+            <button id="navTutorial" class="btn btn-dark w-100">Tutorial</button>
+          </div>
+        </nav>
+        <main class="col-10">
+
+        </main>
+    </section>
+</body>
+</html>

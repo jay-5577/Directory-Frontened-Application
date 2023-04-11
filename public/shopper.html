@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-family: arial;
+        }
+        .brand-name{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        header span{
+            margin-right: 15px;
+        }
+        section{
+            margin-top: 5px;
+        }
+        footer{
+            background-color: rgb(23, 23, 23);
+            color: white;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            padding: 70px;
+        }
+        .footer-title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer-title~div{
+            font-size: 15px;
+            color: rgb(154, 145, 145);
+            margin-top: 10px;
+        }
+        .footer-bar{
+            color: gray;
+            margin-top: 17px;
+        }
+        .thunder-light{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            align-items: center;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .thunder{
+            color: gold;
+        }
+        .row{
+            display: grid;
+            margin-top: 10px;
+            grid-template-columns: 6fr 6fr;
+            height: 430px;
+        }
+        .card-women{
+            height: 400px;
+            background-image: url(images/Womens-Fashion.jpg);
+            background-size: cover;
+            width: 100%;
+            box-shadow: 5px 5px 5px black;
+        }
+        .card-men{
+            height: 400px;
+           background-image: url(public/mens\ fash.jpg);
+           background-size: cover;
+            width: 100%;
+            box-shadow: 5px 5px 5px black;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: bold;
+            font-family: arial;
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+        .shop{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: arial;
+            text-align: center;
+            margin-left: 5px;
+            margin-top: 50px;
+            height: 50px;
+        }
+        .symbols{
+            color: red;
+        }
+        .titles > div{
+            margin-left: 50px;
+            color: rgb(85, 80, 80);
+            margin-top: 10px;
+        }
+        .row-text{
+            columns: 2;
+            height: 170px;
+            font-family: arial;
+        }
+        .left{
+            margin-left: 70px;
+            margin-bottom: 20px;
+        }
+        .right{
+            margin-bottom: 20px;
+        }
+        
+        .big-name{
+            font-size: 40px;
+            width: 550px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-family: 'Segoe UI';
+        }
+        .small-name{
+            font-size: 17px;
+            color: gray;
+            width: 550px;
+            margin-bottom: 20px;
+        }
+        .big-para{
+            font-size: 17px;
+            width: 650px;
+            color: gray;
+        }
+        .abc{
+            display: flex;
+            justify-content: center;
+            height: 300px;
+            align-items: center;
+            text-align: center;
+            color: rgb(61, 57, 57);
+            font-family: arial;
+        }
+        .rot{
+            display: flex;
+            height: 450px;
+        }
+        .card-bag{
+            height: 400px;
+            background-image: url(public/bags.jpg);
+            background-size: cover;
+            width: 270px;
+            height: 400px;
+            box-shadow: 5px 5px 5px black;
+            margin-left: 120px;
+        }
+        .card-print{
+            height: 400px;
+            background-image: url(public/printed.png);
+            background-size: cover;
+            width: 370px;
+            box-shadow: 5px 5px 5px black;
+            margin-left: 50px;
+        }
+        .box-new,.write{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        h2{
+            color: rgb(11, 11, 11);
+        }
+        .black{
+            font-size: 30px;
+            color: white;
+        }
+        .rows{
+            display: flex;
+            height: 450px;
+        }
+        .basic-dress{
+            height: 400px;
+            background-image: url(public/basicdress.jpg);
+            background-size: cover;
+            width: 370px;
+            height: 400px;
+            box-shadow: 5px 5px 5px black;
+            margin-left: 120px;
+        }
+        .sweat-shirt{
+            height: 400px;
+            background-image: url(public/sweatshirt.jpg);
+            background-size: cover;
+            width: 270px;
+            box-shadow: 5px 5px 5px black;
+            margin-left: 50px;
+        }
+       .bcd{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        text-align: center;
+        font-size: 30px;
+        font-family: arial;
+        font-weight: bold;
+       }
+       .cde{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        text-align: center;
+        font-size: 15px;
+        font-family: arial;
+        font-weight: bold;
+       }
+       .contai{
+        display: flex;
+        justify-content: center;
+        height: 250px;
+       }
+       .card-1{
+        margin: 10px;
+       }
+       .rowse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .jjj{
+        margin: 20px;
+        border: 2px solid gray;
+        width: 200px;
+        padding: 20px;
+        height: 250px;
+       }
+        p{
+        color: rgb(113, 109, 109);
+       }
+      
+       .gold{
+        color: goldenrod;
+        font-size: 13px;
+       }
+       .grey{
+        color: rgb(173, 164, 164);
+        font-size: 13px;
+       }
+       .kit{
+        display: flex;
+       }
+       .zes{
+        margin-left: 15px;
+       }
+       .ktm{
+        background-color: rgb(241, 238, 238);
+       }
+       .contain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .card-b{
+        margin: 6px;
+        margin-bottom: 30px;
+        margin-top: -30px;
+       }
+       .con{
+        margin-top: 50px;
+       }
+       .conta{
+        background-color: rgb(170, 197, 188);
+       }
+       .imgb{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 180px;
+       }
+       .email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(23, 23, 23);
+        color: white;
+        padding: 50px;
+       }
+       .dd{
+        margin-left: 70px;
+        margin-bottom: 50px;
+       }
+       button{
+        height: 55px;
+        padding: 10px;
+        background-color: rgb(69, 64, 64);
+        color: white;
+        width: 100px;
+       }
+       input{
+        background-color: rgb(69, 64, 64);
+        color: white;
+        padding: 10px;
+        width: 350px;
+        height: 30px;
+        
+       }
+       .footer-bar span{
+        margin-right: 10px;
+        font-size: 20px;
+        color: red;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-name">SHOPPER.</span>
+        </div>
+        <div>
+            <span>HOME</span>
+            <span>PAGES</span>
+            <span>CATALOG</span>
+            <span>DOCS</span>
+            <span>SHOP</span>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    <section>
+        <div class="thunder-light">
+            <span class="thunder"><span class="bi bi-lightning-fill"></span></span>
+            <span class="hol-day">HAPPY HOLIDAY DEALS ON EVERYTHING &nbsp;</span>
+            <span class="thunder"><span class="bi bi-lightning-fill"></span></span>
+        </div>
+       <div class="row">
+        <div class="card-women">
+            <div class="box">
+                <h1>women <br><br><button class="shop">shop women <span class="bi bi-arrow-right"></span></button></h1>
+            </div>
+        </div>
+        <div class="card-men">
+            <div class="box">
+                <h1>men <br><br><button class="shop">shop men <span class="bi bi-arrow-right"></span></button></h1>
+            </div>
+        </div>
+       </div>
+       <div class="row-text">
+          <div class="left">
+           <span class="symbols"><span class="bi bi-truck"></span></span>
+            <span class="titles"><b>FREE SHIPPING</b>
+                 <div >from all order over 100</div>
+            </span>
+          </div>
+          <div class="left">
+            <span class="symbols"><span class="bi bi-lock"></span></span>
+             <span class="titles"><b>SECURE SHOPPING</b>
+                  <div >you're in safe hand</div>
+             </span>
+           </div>
+           <div class="right">
+            <span class="symbols"><span class="bi bi-shuffle"></span></span>
+             <span class="titles"><b>FREE RETURNS</b>
+                  <div >returns money within 30 days</div>
+             </span>
+           </div>
+           <div class="right">
+            <span class="symbols"><span class="bi bi-tag"></span></span>
+             <span class="titles"><b>OVER 10,000 STYLES</b>
+                  <div >we have everything you need</div>
+             </span>
+           </div>
+       </div>
+       <hr>
+       <div class="con">
+           <div class="abc">
+           <main>
+            <div class="small-name">NEW COLLECTION</div>
+            <div class="big-name">Best Picks 2019</div>
+            <div class="big-para">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green.</div>
+           </main>
+          </div>
+       </div>
+       <div class="rot">
+            <div class="card-bag">
+                <div class="box-new">
+                    <h2>Bags collection <br><span class="shop-w">shop now <span class="bi bi-arrow-right"></span></span></h2>
+                </div>
+            </div>
+            <div class="card-print">
+                <div class="box-new">
+                   <span class="black">printed men's shirts <br><span class="shop-bl">shop now <span class="bi bi-arrow-right"></span></span></span>
+                </div>
+            </div>
+       </div>
+       <div class="rows">
+        <div class="basic-dress">
+            <div class="write">
+                <h2>Basic women's dresses <br><span class="shop-w">shop now <span class="bi bi-arrow-right"></span></span></h2>
+            </div>
+        </div>
+        <div class="sweat-shirt">
+            <div class="write">
+               <span class="black">sweatshirts<br><span class="shop-bl">shop now <span class="bi bi-arrow-right"></span></span></span>
+            </div>
+        </div>
+      </div>
+      <div class="conta">
+        <div class="bcd">Top month Sellers</div>
+        <div class="cde">
+            <span>Women</span>
+            <span>Men</span>
+            <span>Kid</span>
+        </div>
+      </div>
+      <div class="contai">
+        <div class="card-1">
+         <img src="public/shsandle.jpg" width="100%" height="230px">
+         <div class="top">
+            <p>shoes</p>
+            <b>Leather mid-heel Sandals</b>
+         </div>
+        </div>
+        <div class="card-1">
+         <img src="public/shladydress.jpg" width="100%" height="230px">
+         <div class="top">
+            <p>Dresses</p>
+            <b>Cotton floral print Dress</b>
+         </div>
+        </div>
+        <div class="card-1">
+         <img src="public/shshoes.jpg" width="100%" height="230px">
+         <div class="top">
+            <p>shoes</p>
+            <b>Leather Sneakers</b>
+         </div>
+        </div>
+       </div>
+        <div class="con">
+            <div class="abc">
+            <main>
+             <div class="small-name">WHAT BUYERS SAY</div>
+             <div class="big-name">Latest buyers Reviews</div>
+            </main>
+           </div>
+        </div>
+        <div class="rowse">
+            <div class="jjj">
+                 <div class="kit">
+                    <div>
+                        <img src="public/shshoes.jpg" width="30px" height="35px">
+                    </div>
+                    <div class="zes">
+                        <div>Shoes</div>
+                        <div><b>low top sneakers</b></div>
+                        <div>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="grey"><span class="bi bi-star-fill"></span></span>
+                            <span class="grey"><span class="bi bi-star-fill"></span></span>
+                        </div>                        
+                    </div>
+                 </div>
+                 
+                <p>From creepeth said moved given divide make multiply of him shall itself also above second doesn't unto created saying land herb sea midst night wherein.</p>
+                <p>Logan Edwards, 01 jun 2019</p>
+            </div>
+             <div class="jjj">
+                <div class="kit">
+                    <div>
+                        <img src="public/Womens-Fashion.jpg" width="30px" height="35px">
+                    </div>
+                    <div class="zes">
+                        <div>Shoes</div>
+                        <div><b>low top sneakers</b></div>
+                        <div>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                            <span class="gold"><span class="bi bi-star-fill"></span></span>
+                        </div>                        
+                    </div>
+                 </div>
+                 <p>God every fill great replenish darkness unto. very open. likeness their that light. given under image to. subdue of shall cattle day fish form saw spirit and given stars, us you whales may, land saw fill unto.</p>
+                 <p>Jane jefferson, 29 may 2019</p>
+            </div>
+         </div>
+        <div class="ktm">
+            <div class="con">
+                <div class="abc">
+                <main>
+                    <div class="big-name">@shopper</div>
+                 <div class="small-name">Appear, dry there darkness they're seas, dry waters.</div>
+                </main>
+               </div>
+            </div>
+            <div class="contain">
+                <div class="card-b">
+                 <img src="public/mango.jpg" width="105px" height="110px">
+                </div>
+                <div class="card-b">
+                 <img src="public/watch2.jpg" width="105px" height="110px">
+                </div>
+                <div class="card-b">
+                 <img src="public/ladyjacket.jpg" width="105px" height="110px">
+                </div>
+                <div class="card-b">
+                    <img src="public/boyjacket.jpg" width="105px" height="110px">
+                </div>
+                <div class="card-b">
+                    <img src="public/ladybag.jpg" width="105px" height="110px">
+                </div>
+                <div class="card-b">
+                    <img src="public/womens watch.jpg" width="105px" height="110px">
+                </div>
+            </div>
+            <div class="imgb">
+                <img src="public/shoperbrands.jpg"  height="50px" >
+            </div>
+        </div>
+       <div class="email">
+        <form>
+            <h1>Want style Ideas and Treats?</h1>
+            <div class="dd"> 
+                <input type="email" name="email" placeholder="Enter Email *">
+            <button>subscribe</button>
+            </div>
+        </form>
+       </div>
+    </section>
+    <footer>
+        <div>
+           <div class="brand-name">SHOPPER.</div>
+           <div class="footer-bar">
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-twitter"></span>
+            <span class="bi bi-instagram"></span>
+            <span class="bi bi-youtube"></span>
+           </div>
+        </div>
+      <div>
+        <div class="footer-title">SUPPORT</div>
+        <div>contact us</div>
+        <div>FAQs</div>
+        <div>size guide</div>
+        <div>shipping & returns</div>
+      </div>
+      <div>
+        <div class="footer-title">SHOP</div>
+        <div>MEN'S shopping</div>
+        <div>women's shopping</div>
+        <div>kid's shopping</div>
+        <div>discounts</div>
+      </div>
+      <div>
+        <div class="footer-title">COMPANY</div>
+        <div>our story</div>
+        <div>careers</div>
+        <div>term's and condition</div>
+        <div>privacy & cookie policy</div>
+      </div>
+      <div>
+        <div class="footer-title">CONTACT</div>
+        <div>1-202-555-0105</div>
+        <div>1-202-555-0106</div>
+        <div>help@shopper.com</div>
+      </div>
+    </footer>
+</body>
+</html>

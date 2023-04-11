@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+        var users = [
+           {UserName:"john"},
+           {UserName:"john12"},
+           {UserName:"david"},
+           {UserName:"john_nit"}
+        ];
+        function VerifyUser(e){
+          console.log(`Char Code :` + e.charCode);
+          var username = document.getElementById("UserName").value;
+          var userError = document.getElementById("UserError");
+          for(var user of users)
+          {
+              if(user.UserName==username) {
+                  userError.innerHTML = "User Name Taken - Try another".fontcolor('red');
+                  break;
+              } else {
+                  userError.innerHTML = "User Name Available".fontcolor('green');
+              }
+          }
+        }
+        function VerifyPassword(e){
+            var PwdError = document.getElementById("PwdError");
+            if(e.which>=65 && e.which<=90) {
+               PwdError.style.display = "block";
+            } else {
+               PwdError.style.display = "none";
+            }
+        }
+   </script>
+</head>
+<body>
+   <dl>
+      <dt>User Name</dt>
+      <dd><input type="text" id="UserName" onkeyup="VerifyUser(event)"></dd>
+      <dd id="UserError"></dd>
+      <dt>Password</dt>
+      <dd>
+         <input type="password" id="Password" onkeypress="VerifyPassword(event)">
+      </dd>
+      <dd style="color:goldenrod; display: none;" id="PwdError">
+         Warning : Caps ON
+      </dd>
+   </dl>
+</body>
+</html>
+  

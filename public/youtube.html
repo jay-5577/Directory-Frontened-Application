@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header{
+            display: flex;
+           justify-content: space-between;
+           margin-bottom: 20px;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        input{
+            width: 300px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+        }
+        .nav-item{
+            text-align: center;
+            margin-right: 15px;
+        }
+        nav{
+            border-right: 1px solid rgb(59, 52, 52);
+        }
+        .bi{
+            margin-bottom: 50px;
+        }
+       
+        .row{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+        iframe{
+           width: 100%;
+           border-radius: 20px;
+           border: none;
+        }
+        .video{
+            margin: 10px;
+        }
+        .space{
+            margin-top: 10px;
+            color: rgb(189, 176, 176);
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="bi bi-justify"></span>
+        </div>
+        <div>
+            <img src="../public/images/youtubelogo.jpg" width="40%">
+        </div>
+        <div>
+           <input type="text">
+           <button> <span class="bi bi-search"></span></button>
+        </div>
+        <div>
+            <span class="bi bi-mic-fill"></span>
+        </div>
+        <div>
+            <span class="bi bi-person-circle">Signin</span>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="nav-item">
+               <div class="bi bi-house-door-fill">
+                <span>HOME</span>
+               </div>
+               <div class="bi bi-clock-history">
+                <span>History</span>
+               </div>
+               <div class="bi bi-music-note-list">
+                <span>Music</span>
+               </div>
+            </div>
+        </nav>
+        <main>
+            <div class="banner">
+                <img src="../public/images/youtube back.png" width="100%" height="200px">
+            </div>
+            <div class="videos">
+                <div class="row">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/TTODJJVVj2k"></iframe>
+                        <div>Craze of Virat Kohli is unreal | Fans from France, USA...</div>
+                           <div> OneCricket</div>
+                            <div class="space">203K views .6 days ago</div>   
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/dONWrZoR0Fc"></iframe>
+                       <div>NAMO NAMO ..</div>
+                       <div>AbbyViral</div>
+                        <div class="space">952K views.1 month ago</div>
+                        
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/AgyTHzjBS-c"></iframe>
+                       <div> How much Coding to learn for Placements? Data Structure..</div>
+                        <div>Apna College</div>
+                        <div class="space">1M views. 6 months ago</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/TTODJJVVj2k"></iframe>
+                        <div>Craze of Virat Kohli is unreal | Fans from France, USA...</div>
+                           <div> OneCricket</div>
+                            <div class="space">203K views .6 days ago</div>   
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/dONWrZoR0Fc"></iframe>
+                       <div>NAMO NAMO ..</div>
+                       <div>AbbyViral</div>
+                        <div class="space">952K views.1 month ago</div>
+                        
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/AgyTHzjBS-c"></iframe>
+                       <div> How much Coding to learn for Placements? Data Structure..</div>
+                        <div>Apna College</div>
+                        <div class="space">1M views. 6 months ago</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

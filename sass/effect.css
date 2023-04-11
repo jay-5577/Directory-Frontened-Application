@@ -1,0 +1,16 @@
+.row h1 {
+  color: red;
+}
+.row p {
+  color: blue;
+}
+
+.rose h1 {
+  color: green;
+}
+.rose p {
+  color: coral;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=effect.css.map */

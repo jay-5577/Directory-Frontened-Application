@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+
+        $(function(){
+             var now = new Date();
+             $("#time").html(now.toLocaleTimeString());
+             $("button").click(function(){
+                  var now = new Date();
+                  $("#loadingTime").html(now.toLocaleTimeString());
+                  $.ajax({
+                      method: "get",
+                      url: "../data/products.json",
+                      success: function(data) {
+                           $.each(data, (property, product)=>{
+                               $(`<tr>
+                                  <td>${product.Name}</td>
+                                  <td>${product.Price}</td>
+                                  <td>${product.Stock}</td>
+                               </tr>`).appendTo("tbody");
+                           })
+                      },
+                      error: function(ex){
+                         alert(`
+                              ${ex.status} - ${ex.statusText}
+                         `);
+                      }
+                  })
+             })
+        })
+    </script>
+</head>
+<body>
+    <h2>Page Loaded on <span id="time"></span></h2>
+    <fieldset>
+         <legend>
+            <button>Load Data</button>
+       
+         </legend>
+         <div id="loadingTime"></div>
+         <table border="1" width="300">
+            <thead>
+               <tr>
+                   <th>Name</th>
+                   <th>Price</th>
+                   <th>Stock</th>
+               </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+       </table>
+    </fieldset>
+</body>
+</html>

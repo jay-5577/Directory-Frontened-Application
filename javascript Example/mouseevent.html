@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function GetImage(viewName){
+            document.getElementById("pic").src = `public/images/${viewName}.jpg`
+        }
+        function GetPosition(e){
+            var flag = document.getElementById("flag");
+            flag.style.position = "fixed";
+            flag.style.left = e.clientX  + "px";
+            flag.style.top = e.clientY  + "px";
+            
+        }
+    </script>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+
+        }
+        nav img:hover{
+            cursor: grab;
+        }
+        nav img{
+           border: 2px solid orangered;
+        }
+    </style>
+</head>
+<body onmousemove="GetPosition(event)">
+   <nav>
+        <div>
+            <img onmouseover="GetImage('womens1')" src="public/images/womens1.jpg" height="50" width="50">
+        </div>
+        <div>
+            <img onmouseover="GetImage('womens2')" src="public/images/womens2.jpg" height="50" width="50">
+        </div>
+        <div>
+            <img onmouseover="GetImage('womens4')" src="public/images/womens4.jpg" height="50" width="50">
+        </div>
+        <div>
+            <img onmouseover="GetImage('Womens-Fashion')" src="public/images/Womens-Fashion.jpg" height="50" width="50">
+        </div>
+        <div>
+            <img onmouseover="GetImage('avatar')" src="public/images/avatar.jpg" height="50" width="50">
+        </div>
+        <div>
+            <img onmouseover="GetImage('fashion')" src="public/images/fashion.jpg" height="50" width="50">
+        </div>
+   </nav>
+   <main>
+        <img height="400" width="200" id="pic">
+   </main>
+   <img src="public/images/flag.gif" id="flag" height="50" width="50">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+    </style>
+    <script>
+        function Msg1(){
+            document.querySelector("h1").innerHTML = "Hi !";
+        }
+        function Msg2(){
+            document.querySelector("h1").innerHTML = "How are you?";
+        }
+        function Msg3(){
+            document.querySelector("h1").innerHTML = "Welcome to jQuery";
+        }
+        var m1, m2, m3;
+        function bodyload(){
+           m1 = setTimeout(Msg1, 2000);
+           m2 =  setTimeout(Msg2, 5000);
+           m3 =  setTimeout(Msg3, 10000);
+        }
+        function CancelClick(){
+            alert("Message 2 Canceled");
+            clearTimeout(m2);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <button onclick="CancelClick()">Cancel Message 2</button>
+        <h1></h1>
+    </div>
+</body>
+</html>

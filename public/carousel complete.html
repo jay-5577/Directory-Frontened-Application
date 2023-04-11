@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+   
+    <h2>carousel</h2>
+   <div class=" carousel slide carousel-dark" data-bs-ride="carousel" id="top">
+        <div class=" carousel-inner">
+            <div class=" carousel-item active" data-bs-interval="2000">
+                <img src="public/amazon 3.jpg"  class=" d-block w-100">
+            </div>
+            <div class=" carousel-item "  data-bs-interval="2000">
+                <img src="public/amazon 4.jpg" height="350px" class=" d-block w-100">
+            </div>
+            <div class=" carousel-item" data-bs-interval="2000">
+                <img src="public/amazon 2.jpg" height="350px" class=" d-block w-100" >
+            </div>
+            <div class=" carousel-item" data-bs-interval="1000">
+                <img src="public/amazon.jpg" height="350px" class=" d-block w-100">
+            </div>
+        </div>
+        <button class=" carousel-control-prev" data-bs-target="#top" data-bs-slide="prev">
+            <span class=" carousel-control-prev-icon"></span>
+        </button>
+        <button class=" carousel-control-next" data-bs-target="#top" data-bs-slide="next">
+            <span class=" carousel-control-next-icon"></span>
+        </button>
+        <div class=" carousel-indicators">
+            <button class=" active" data-bs-slide-to="0" data-bs-target="#top"></button>
+            <button  data-bs-slide-to="1" data-bs-target="#top"></button>
+            <button  data-bs-slide-to="2" data-bs-target="#top"></button>
+            <button data-bs-slide-to="3" data-bs-target="#top"></button>
+        </div>
+   </div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

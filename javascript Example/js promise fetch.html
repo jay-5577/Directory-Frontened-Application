@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bodyload(){
+            
+            fetch("data/products.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(item){
+
+            
+                for(var product of item){
+                    var tr = document.createElement("tr");
+                    var tdname = document.createElement("td");
+                    var tdprice = document.createElement("td");
+                    var tdstock = document.createElement("td");
+
+                    tdname.innerHTML = product.NAME;
+                    tdprice.innerHTML = product.PRICE;
+                    tdstock.innerHTML = product.STOCK;
+
+                    tr.appendChild(tdname);
+                    tr.appendChild(tdprice);
+                    tr.appendChild(tdstock);
+
+                    document.querySelector("tbody").appendChild(tr);
+                }
+            })
+           .catch(function(ex){
+            console.log(ex);
+           })
+        }
+    </script>
+</head>
+<body class=" container-fluid" onload="bodyload()">
+
+    <h2>Products detaile</h2>
+    <table class=" table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>stock</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>

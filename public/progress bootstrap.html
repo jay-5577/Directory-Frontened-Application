@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <div>
+        <h2>HTML Progress</h2>
+        <progress min="1" max="100" value="30"></progress> 30%
+    </div>
+    <div>
+        <h2>Bootstrap Progress</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-animated progress-bar-striped bg-success" style="width:40%">
+                    40% Completed
+            </div>
+            <div class="progress-bar text-dark progress-bar-animated progress-bar-striped  bg-warning" style="width:20%">
+                20% Pending
+            </div>
+            <div class="progress-bar progress-bar-animated progress-bar-striped  bg-danger" style="width:40%">
+                40% Not Started
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Bootstrap Spinners</h2>
+        <button class="btn btn-danger">
+           <span class="spinner-border text-warning spinner-border-sm"></span> Loading
+        </button>
+        <button class="btn btn-danger">
+            <span class="spinner-grow text-warning spinner-grow-sm"></span> Loading
+         </button>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

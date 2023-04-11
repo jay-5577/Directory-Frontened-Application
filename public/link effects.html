@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul{
+            display: flex;
+        }
+        li{
+            margin-right: 50px;
+            list-style: none;
+        }
+        .con{
+            display: flex;
+        }
+        .topic{
+            margin: 20px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .topic:target{
+            background-color: black;
+            color: white;
+            color: green;
+        }
+        a:link{
+            color: rgb(44, 44, 20);
+        }
+        a:active{
+            text-decoration: none;
+            color: pink;
+            text-decoration: none;
+        }
+        a:visited{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#html">html</a></li>
+        <li><a href="#css">css</a></li>
+        <li><a href="#js">javascript</a></li>
+    </ul>
+    <div class="con">
+        <div id="html" class="topic">
+            <h2>html</h2>
+            <p>it is markup language</p>
+        </div>
+        <div id="css" class="topic">
+            <h2>css</h2>
+            <p>it defines style for html</p>
+        </div>
+        <div id="js" class="topic">
+            <h2>javascript</h2>
+            <p>it handles client request</p>
+        </div>
+    </div>
+</body>
+</html>

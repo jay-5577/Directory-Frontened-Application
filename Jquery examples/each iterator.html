@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+       function LoadProducts(){
+        fetch("../data/products.json")
+        .then(res=>res.json())
+        .then(data=>{
+            $.each(data,(property,value)=>{
+               $(` <tr>
+                    <td>${value.Name}</td>    
+                    <td>${value.Price}</td>    
+                    <td>${value.Stock}</td>    
+                </tr>`).appendTo("tbody");
+            })
+        })
+       }
+       $(function(){
+            LoadProducts();
+       })
+    </script>
+</head>
+<body>
+    
+   <table cellpadding="10" border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>stock</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+   </table>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All FASHION</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        iframe{
+            border: 1px solid rgb(97, 24, 45);
+            height: 400px;
+        }
+        header{
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .img{
+            width: 100%;
+            height: 130px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        .card-kid{
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgb(174, 169, 169);
+            background-image: url(public/kids\ title.jpg);
+            background-size: cover;
+            height: 120px;
+        }
+        .card-women{
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgb(174, 169, 169);
+            background-image: url(public/womens\ title.jpg);
+            background-size: cover;
+            height: 120px;
+        }
+        .card-men{
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgb(174, 169, 169);
+            background-image: url(public/mens\ title.jpg);
+            background-size: cover;
+            height: 120px;
+        }
+        .print{
+            text-align: center;
+            align-items: center;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .card2{
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgb(174, 169, 169);
+        }
+        .card3{
+            margin: 10px;
+            box-shadow: 2px 2px 2px rgb(174, 169, 169);
+        }
+        .box{
+            border: 1px solid grey;
+            margin-right: 10px;
+        }
+        .bi{
+           
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">FASHION WORLD</div>
+    </header>
+    <section>
+
+        <div class="container">
+            <div class="box">
+                <div class="card-kid">
+                   <div class="print">
+                     <a href="kids.html" target="framebody">Kid's <br><br><span class="bi bi-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="card-women">
+                    <div class="print">
+                      <a href="womens.html" target="framebody">Women's <br><br><span class="bi bi-arrow-right"></span></a>
+                     </div>
+                 </div>
+                 <div class="card-men">
+                    <div class="print">
+                      <a href="mens.html" target="framebody">Men's <br><br><span class="bi bi-arrow-right"></span></a>
+                     </div>
+                 </div>
+                
+            </div>
+
+            <div class="box2">
+               <iframe name="framebody" width="100%" height="300px"></iframe>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+   <script type="text/javascript">
+      class hdfc_version1{
+         personal = "personal banking service";
+         nri = "nri banking service";
+         print(){
+            document.write(`${this.personal}<br>${this.nri}<br>`)
+         }
+      }
+      class hdfc_version2 extends hdfc_version1{
+         loans = "personal bank and vehicle loans";
+         print(){
+            super.print();
+            document.write(`${this.loans}<br>`)
+         }
+      }
+      class hdfc_version3 extends hdfc_version2{
+         govt = "govt bank scheme";
+         print(){
+            super.print();
+            document.write(`${this.govt}<br>`)
+         }
+      }
+      function installclick(){
+         var version = document.getElementById("version").value;
+         document.write(`<h2>you installed ${version} of HDFC</h2>`);
+         switch(version){
+            case "version-1":
+               let obj1 = new hdfc_version1();
+               obj1.print();
+               break;
+         
+            case "version-2":
+               let obj2 = new hdfc_version2();
+               obj2.print();
+               break;
+
+            case "version-3":
+               let obj3 = new hdfc_version3();
+               obj3.print();
+               break;
+         }
+      }
+   </script>
+</head>
+<body class=" container-fluid">
+   <br>
+   <h2>hdfc bank app</h2>
+   <div>
+      <label class=" form-label">select version</label>
+      <div>
+         <select id="version">
+            <option>version-1</option>
+            <option>version-2</option>
+            <option>version-3</option>
+         </select>
+         <button class="  btn btn-success" onclick="installclick()">install</button>
+      </div>
+   </div>
+   
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+      }
+      form{
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 20px;
+      }
+    </style>
+</head>
+<body>
+    <form>
+        <h2><span class="bi bi-person-fill"></span> REGISTER USER</h2>
+        <div class="mb-3">
+          <label class="form-label">USER NAME</label>
+          <div>
+            <input type="text" class="form-control" autofocus name="username" required >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">PASSWORD</label>
+          <div>
+            <input type="password" class="form-control" required name="password" >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">YOUR CITY</label>
+          <div>
+            <select name="city"  class="form-select">
+              <option>select your city</option>
+              <option>mumbai</option>
+              <option>pune</option>
+              <option>hyderabad</option>
+              <option>delhi</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">SUBSCRIBE</label>
+          <div class="form-switch">
+            <input type="checkbox" value="yes" class="form-check-input" name="subscribe" required> YES
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">PRICE RANGE</label>
+          <div>
+            <input type="range" class="form-range" name="price" min="1" max="100" value="1">
+          </div>
+        </div>
+        <button class="btn-outline-primary btn w-100">REGISTER</button>
+    </form>
+</body>
+</html>
+

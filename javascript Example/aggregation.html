@@ -1,0 +1,30 @@
+<script>
+    class tv{
+
+        name = "samsung tv";
+        price = 4500;
+        print(){
+            document.write(`name = ${this.name} <br> price = ${this.price}`);
+        }
+
+    }
+    class watch{
+        stock = true;
+        print(){
+            var obj = new tv();
+            obj.name = "fastrack watch";
+            obj.price = 45624;
+            obj.print();
+            document.write(`stock = ${(this.stock==true)?"availble":"out of stock"}`);
+        }
+    }
+    var product = prompt("enter product name","tv|watch");
+    if(product=="tv"){
+        let obj = new tv();
+        obj.print();
+    }
+    else if(product=="watch"){
+        let obj = new watch();
+        obj.print();
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+
+        $(function(){
+              var products = [{Id:1, Name:"TV"},{Id:2, Name:"Mobile"},{Id:3, Name:"Watch"}];
+              $.each(products, (property, product)=>{
+                    $(`<tr>
+                         <td>${product.Name}</td>
+                         <td> <button name=${product.Id} id="btnDelete">Delete</button> </td>
+                        </tr>`).appendTo("tbody");
+              });
+
+              $(document).on("click", "#btnDelete", function(e){
+                  alert(`${e.target.name} Delete Clicked`);
+              })
+        })
+    </script>
+</head>
+<body>
+    <table border="1" width="400">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html

@@ -1,0 +1,25 @@
+<script>
+    function calculate(a, b, operator) {
+      if(operator=="add"){
+        return a+b;
+      }
+      else if(operator=="sub"){
+        return a-b;
+      }
+      else if(operator=="mul"){
+        return a*b;
+      }
+      else{
+        return "please enter valid choice : ";
+      }
+    }
+    
+    
+    let operator = prompt("Enter operator (add, sub, mul):");
+    let a = parseInt(prompt("Enter 1st value"));
+    let b = parseInt(prompt("Enter 2nd value"));
+    
+    
+     document.write(calculate(a,b, operator));
+    
+    </script>

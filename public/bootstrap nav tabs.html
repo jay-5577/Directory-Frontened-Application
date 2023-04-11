@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <h2>Nav and Tabs</h2>
+    <ol class="nav nav-tabs">
+        <li class="nav-item active"><a href="#basic" data-bs-toggle="tab" class="nav-link"> <span class="nav-text">Basic Details</span> </a></li>
+        <li class="nav-item"><a href="#preview" data-bs-toggle="tab" class="nav-link"> <span class="nav-text">Preview</span> </a></li>
+        <li class="nav-item"><a href="#description" data-bs-toggle="tab" class="nav-link"> <span class="nav-text">Description</span> </a></li>
+    </ol>
+    <div class="tab-content">
+        <div class="tab-pane active" id="basic">
+            <dl>
+                <dt>Name</dt>
+                <dd>Real ME Mobile</dd>
+                <dt>Price</dt>
+                <dd>&#8377; 9000/-</dd>
+            </dl>
+        </div>
+        <div class="tab-pane" id="preview">
+            <img src="public/c31m.webp" width="200" height="300">
+        </div>
+        <div class="tab-pane" id="description">
+            <ul>
+                <li>Feature-1</li>
+                <li>Feature-2</li>
+                <li>Feature-3</li>
+                <li>Feature-4</li>
+                <li>Feature-5</li>
+            </ul>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

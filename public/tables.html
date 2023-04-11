@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        caption{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+   <table width="500" border="1" cellpadding="10" cellspacing="10" background="public/banner.jpg" align="center">
+    <caption>Products Catalog</caption>
+    <colgroup span="2"></colgroup>
+    <thead>
+        <tr bgcolor="green" >
+            <th>Name</th>
+            <th>price</th>
+            <th>preview</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr bgcolor="aqua" align="center">
+            <td>vegetables</td>
+            <td>&#8377;10 to &#8377;100</td>
+            <td><img src="public/vegatable.jpg" width="100%" height="100px"></td>
+        </tr>
+        <tr bgcolor="gold" align="center" >
+            <td>Meat</td>
+            <td>&#8377;100 to &#8377;500</td>
+            <td><img src="public/meat.jpg" width="100%" height="100px"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr bgcolor="red" align="center">
+           
+            <td colspan="3">&copy;copyright 2022</td>
+            
+        </tr>
+    </tfoot>
+   </table>
+</body>
+</html>
